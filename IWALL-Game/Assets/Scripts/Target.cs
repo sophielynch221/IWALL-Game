@@ -8,14 +8,19 @@ public class Target : MonoBehaviour
 
     private void Update()
     {
-       // if (Input.GetKeyDown(KeyCode.W))
-       // {
-       //     Instantiate(boxParticles, transform.position, transform.rotation);
-       //     Destroy(gameObject);
-       // }
+        
     }
 
-    private void OnTriggerEnter(Collider other)
+    public void Work()
+    {
+        if (Input.GetKeyDown(KeyCode.W))
+        {
+            Instantiate(boxParticles, transform.position, transform.rotation);
+            Destroy(gameObject);
+        }
+    }
+
+    /*private void OnTriggerEnter(Collider other)
     {
         if (Input.GetKeyDown(KeyCode.W))
         {
@@ -23,6 +28,6 @@ public class Target : MonoBehaviour
             Destroy(gameObject);
         }
 
-    }
+    }*/
 
 }
