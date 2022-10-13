@@ -6,6 +6,6 @@ public class Triggers : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
-        other.GetComponent<Target>().Work();
+        other.GetComponent<Target>().enabled = true;
     }
 }
