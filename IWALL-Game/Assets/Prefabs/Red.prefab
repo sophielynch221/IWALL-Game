@@ -112,6 +112,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boxParticles: {fileID: 5656486132127992050}
+  colour: 1
 --- !u!114 &5656486131819926766
 MonoBehaviour:
   m_ObjectHideFlags: 0

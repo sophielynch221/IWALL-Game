@@ -31,7 +31,7 @@ public class Spawner : MonoBehaviour
 
         while (!stop)
         {
-            randCube = Random.Range(0, 2);
+            randCube = Random.Range(0, 4);
 
             Vector3 spawnPosition = new Vector3(Random.Range(-spawnValues.x, spawnValues.x), Random.Range(-spawnValues.y, spawnValues.y), Random.Range(-spawnValues.z, spawnValues.z));
 
