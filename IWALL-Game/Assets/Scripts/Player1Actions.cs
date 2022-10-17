@@ -47,4 +47,25 @@ public class Player1Actions : MonoBehaviour
         }
 
     }
+
+    public void rightKick()
+    {
+        anim.SetTrigger("RightKick");
+    }
+
+    public void LeftHit()
+    {
+        anim.SetTrigger("LeftBox");
+    }
+
+    public void RightHit()
+    {
+        anim.SetTrigger("RightBox");
+    }
+
+    public void LeftKick()
+    {
+        anim.SetTrigger("LeftKick");
+    }
+
 }

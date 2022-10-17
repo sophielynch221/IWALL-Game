@@ -8,6 +8,13 @@ public class Target : MonoBehaviour
 
     public ParticleSystem boxParticles;
     public type colour;
+    public GameObject character;
+
+    public void GotCube()
+    {
+        Instantiate(boxParticles, transform.position, transform.rotation);
+        Destroy(gameObject);
+    }
 
     private void Update()
     {
