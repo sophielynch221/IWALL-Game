@@ -13,6 +13,7 @@ public class MoveCube : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position += Time.deltaTime * transform.forward * 4;
+        //moves the cube toward the person
+        transform.position += Time.deltaTime * transform.forward * 4; 
     }
 }

@@ -15,6 +15,7 @@ public class Player2Actions : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //animations
         if (Input.GetKeyDown(KeyCode.M))
         {
             anim.SetTrigger("Block");

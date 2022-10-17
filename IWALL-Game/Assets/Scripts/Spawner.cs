@@ -25,6 +25,7 @@ public class Spawner : MonoBehaviour
         spawnWait = Random.Range(spawnLeastWait, spawnMostWait);
     }
 
+    //spawns cubes
     IEnumerator waitSpawner()
     {
         yield return new WaitForSeconds(startWait);

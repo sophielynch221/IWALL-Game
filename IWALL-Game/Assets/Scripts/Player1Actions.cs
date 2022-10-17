@@ -48,6 +48,7 @@ public class Player1Actions : MonoBehaviour
 
     }
 
+    //Animations
     public void rightKick()
     {
         anim.SetTrigger("RightKick");

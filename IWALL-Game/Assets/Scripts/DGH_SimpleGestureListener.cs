@@ -19,10 +19,11 @@ public class DGH_SimpleGestureListener : MonoBehaviour, KinectGestures.GestureLi
 	public GameObject thing;
 	public KinectGestures.Gestures specicalSelectedGesture;
 
-	[SerializeField] UnityEvent onSwipeLeft;
-	[SerializeField] UnityEvent onSwipeRight;
+	[SerializeField] UnityEvent onHitLeft;
+	[SerializeField] UnityEvent onHitRight;
 	[SerializeField] UnityEvent onJump;
-	[SerializeField] UnityEvent onSquat;
+	[SerializeField] UnityEvent onKickLeft;
+	[SerializeField] UnityEvent onKickRight;
 
 
 	public void UserDetected(long userId, int userIndex)
@@ -133,17 +134,19 @@ public class DGH_SimpleGestureListener : MonoBehaviour, KinectGestures.GestureLi
 		switch (gesture)
 		{
 			case KinectGestures.Gestures.SwipeLeft:
-				onSwipeLeft.Invoke();
+				onHitLeft.Invoke();
 				break;
 			case KinectGestures.Gestures.SwipeRight:
-				onSwipeRight.Invoke();
+				onHitRight.Invoke();
 				break;
-			case KinectGestures.Gestures.Squat:
-				onSquat.Invoke();
+			case KinectGestures.Gestures.KickLeft:
+				onKickLeft.Invoke();
 				break;
-			
-				
-        }
+			case KinectGestures.Gestures.KickRight:
+				onKickRight.Invoke();
+				break;
+
+		}
 		//END NONSENSE
 		return true;
 	}
