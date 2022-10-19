@@ -14,7 +14,6 @@ public class ChangeScene : MonoBehaviour
     void Start()
     {
         score = 0;
-        lives = 3;
     }
 
     // Update is called once per frame
