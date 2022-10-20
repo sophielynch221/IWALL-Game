@@ -4948,9 +4948,9 @@ MonoBehaviour:
   Losealife:
     m_PersistentCalls:
       m_Calls: []
-  boxParticles: {fileID: 8160156112830722387}
+  boxParticles: {fileID: 3506046804512226573, guid: d7064e1c93ee61a41b3894cd413317ba, type: 3}
   colour: 2
-  triggercollider: {fileID: 0}
+  hit: 0
 --- !u!114 &8031922682957623532
 MonoBehaviour:
   m_ObjectHideFlags: 0

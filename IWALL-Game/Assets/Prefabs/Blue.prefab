@@ -156,9 +156,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  boxParticles: {fileID: 5689503640864288145}
+  boxParticles: {fileID: 3506046804512226573, guid: d7064e1c93ee61a41b3894cd413317ba, type: 3}
   colour: 3
-  triggercollider: {fileID: 8863434481004806119, guid: 913cb89902ddffd49a686d61d1141ea1, type: 3}
+  hit: 0
 --- !u!114 &5689503640349062230
 MonoBehaviour:
   m_ObjectHideFlags: 0
