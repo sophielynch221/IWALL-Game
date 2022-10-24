@@ -3,12 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.Events;
 
 public class ChangeScene : MonoBehaviour
 {
     [SerializeField] Text scoretext;
     public float score;
-    public float lives;
+    public float startcount = 10f;
+    public float currentcount;
+
+    public UnityEvent disappear;
 
     // Start is called before the first frame update
     void Start()
@@ -47,25 +51,15 @@ public class ChangeScene : MonoBehaviour
         SceneManager.LoadScene("2player");
     }
 
-    //hits the early trigger
-    public void TooEarly()
+    public void ResetScore()
     {
-        score = score + 10;
-        Debug.Log("Too Early");
+        score = 0;
     }
 
-    //perfectly hits the trigger
-    public void Perfect()
+    public void StopShowingInstruction()
     {
-        score = score + 50;
-        Debug.Log("Perfect");
+        currentcount = startcount;
+        currentcount -= Time.deltaTime * 1;
+        if (currentcount <= 0) { disappear.Invoke(); }
     }
-
-    //hits the late trigger
-    public void Losealife()
-    {
-        score = score + 10;
-        Debug.Log("Too late");
-    }
-
 }

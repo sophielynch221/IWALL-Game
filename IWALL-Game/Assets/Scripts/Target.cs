@@ -7,10 +7,6 @@ public class Target : MonoBehaviour
 {
     public enum type { yellow, red, orange, blue};  //for cubes 
 
-    [SerializeField] UnityEvent add10toscore;
-    [SerializeField] UnityEvent add50toscore;
-    [SerializeField] UnityEvent Losealife;
-
     public ParticleSystem boxParticles;
     public type colour;  //enum group name
 
@@ -19,12 +15,13 @@ public class Target : MonoBehaviour
         Instantiate(boxParticles, transform.position, transform.rotation);
         Destroy(gameObject);
     }
-
-    public bool hit;
+    public float triggerscore;
+    private GameObject forscript;
 
     private void Start()
     {
-        hit = false;
+        forscript = GameObject.Find("ForScripts");
+        triggerscore = 0;
     }
 
     private void Update()
@@ -35,40 +32,10 @@ public class Target : MonoBehaviour
             {
                 Instantiate(boxParticles, transform.position, transform.rotation);
                 Destroy(gameObject);
-                hit = true;
 
-
-                /*/if it hits the first trigger the player gets ten points because they were too early
-                  if(triggercollider.GetComponent<Triggers>().timingscore == Triggers.timing.TooEarly)
-                  {
-                      add10toscore.Invoke();
-                      Debug.Log("Too early");
-                      
-                  }
-                   
-                  // if it hits the second trigger the player gets fifty points because they were perfect
-                  if (triggercollider.GetComponent<Triggers>().timingscore == Triggers.timing.Perfect)
-                  {
-                      add50toscore.Invoke();
-                      Debug.Log("Perfect, well done");
-                   
-                  } 
-                   
-                  // if it hits the third trigger the player gets ten points because they were too late
-                  if (triggercollider.GetComponent<Triggers>().timingscore == Triggers.timing.TooLate)
-                  {
-                      add10toscore.Invoke();
-                      Debug.Log("Too Late");
-                  
-                  } 
-                  
-                  // if it hits the last trigger the player loses a life
-                  if (triggercollider.GetComponent<Triggers>().timingscore == Triggers.timing.LoseALife)
-                  {
-                     Losealife.Invoke();
-                     Debug.Log("Hard luck, maybe next time");
-                  }
-                  */
+                if (triggerscore == 0) {forscript.GetComponent<ChangeScene>().score = forscript.GetComponent<ChangeScene>().score + 10;}
+                if (triggerscore == 1) {forscript.GetComponent<ChangeScene>().score = forscript.GetComponent<ChangeScene>().score + 50;}
+                if (triggerscore == 2) {forscript.GetComponent<ChangeScene>().score = forscript.GetComponent<ChangeScene>().score + 10;}
             }
         }
 
@@ -78,40 +45,10 @@ public class Target : MonoBehaviour
             {
                 Instantiate(boxParticles, transform.position, transform.rotation);
                 Destroy(gameObject);
-                hit = true;
 
-                /*/if it hits the first trigger the player gets ten points because they were too early
-                if (triggercollider.GetComponent<Triggers>().timingscore == Triggers.timing.TooEarly)
-                {
-                    add10toscore.Invoke();
-                    Debug.Log("Too early");
-
-                }
-
-                // if it hits the second trigger the player gets fifty points because they were perfect
-                if (triggercollider.GetComponent<Triggers>().timingscore == Triggers.timing.Perfect)
-                {
-                    add50toscore.Invoke();
-                    Debug.Log("Perfect, well done");
-
-                }
-
-                // if it hits the third trigger the player gets ten points because they were too late
-                if (triggercollider.GetComponent<Triggers>().timingscore == Triggers.timing.TooLate)
-                {
-                    add10toscore.Invoke();
-                    Debug.Log("Too Late");
-
-                }
-
-                // if it hits the last trigger the player loses a life
-                if (triggercollider.GetComponent<Triggers>().timingscore == Triggers.timing.LoseALife)
-                {
-                    Losealife.Invoke();
-                    Debug.Log("Hard luck, maybe next time");
-                }
-                */
-
+                if (triggerscore == 0) { forscript.GetComponent<ChangeScene>().score = forscript.GetComponent<ChangeScene>().score + 10; }
+                if (triggerscore == 1) { forscript.GetComponent<ChangeScene>().score = forscript.GetComponent<ChangeScene>().score + 50; }
+                if (triggerscore == 2) { forscript.GetComponent<ChangeScene>().score = forscript.GetComponent<ChangeScene>().score + 10; }
             }
         }
 
@@ -121,39 +58,10 @@ public class Target : MonoBehaviour
             {
                 Instantiate(boxParticles, transform.position, transform.rotation);
                 Destroy(gameObject);
-                hit = true;
 
-                /*/if it hits the first trigger the player gets ten points because they were too early
-                if (triggercollider.GetComponent<Triggers>().timingscore == Triggers.timing.TooEarly)
-                {
-                    add10toscore.Invoke();
-                    Debug.Log("Too early");
-
-                }
-
-                // if it hits the second trigger the player gets fifty points because they were perfect
-                if (triggercollider.GetComponent<Triggers>().timingscore == Triggers.timing.Perfect)
-                {
-                    add50toscore.Invoke();
-                    Debug.Log("Perfect, well done");
-
-                }
-
-                // if it hits the third trigger the player gets ten points because they were too late
-                if (triggercollider.GetComponent<Triggers>().timingscore == Triggers.timing.TooLate)
-                {
-                    add10toscore.Invoke();
-                    Debug.Log("Too Late");
-
-                }
-
-                // if it hits the last trigger the player loses a life
-                if (triggercollider.GetComponent<Triggers>().timingscore == Triggers.timing.LoseALife)
-                {
-                    Losealife.Invoke();
-                    Debug.Log("Hard luck, maybe next time");
-                }*/
-
+                if (triggerscore == 0) { forscript.GetComponent<ChangeScene>().score = forscript.GetComponent<ChangeScene>().score + 10; }
+                if (triggerscore == 1) { forscript.GetComponent<ChangeScene>().score = forscript.GetComponent<ChangeScene>().score + 50; }
+                if (triggerscore == 2) { forscript.GetComponent<ChangeScene>().score = forscript.GetComponent<ChangeScene>().score + 10; }
             }
         }
 
@@ -163,39 +71,10 @@ public class Target : MonoBehaviour
             {
                 Instantiate(boxParticles, transform.position, transform.rotation);
                 Destroy(gameObject);
-                hit = true;
 
-                /*/if it hits the first trigger the player gets ten points because they were too early
-                if (triggercollider.GetComponent<Triggers>().timingscore == Triggers.timing.TooEarly)
-                {
-                    add10toscore.Invoke();
-                    Debug.Log("Too early");
-
-                }
-
-                // if it hits the second trigger the player gets fifty points because they were perfect
-                if (triggercollider.GetComponent<Triggers>().timingscore == Triggers.timing.Perfect)
-                {
-                    add50toscore.Invoke();
-                    Debug.Log("Perfect, well done");
-
-                }
-
-                // if it hits the third trigger the player gets ten points because they were too late
-                if (triggercollider.GetComponent<Triggers>().timingscore == Triggers.timing.TooLate)
-                {
-                    add10toscore.Invoke();
-                    Debug.Log("Too Late");
-
-                }
-
-                // if it hits the last trigger the player loses a life
-                if (triggercollider.GetComponent<Triggers>().timingscore == Triggers.timing.LoseALife)
-                {
-                    Losealife.Invoke();
-                    Debug.Log("Hard luck, maybe next time");
-                }*/
-
+                if (triggerscore == 0) { forscript.GetComponent<ChangeScene>().score = forscript.GetComponent<ChangeScene>().score + 10; }
+                if (triggerscore == 1) { forscript.GetComponent<ChangeScene>().score = forscript.GetComponent<ChangeScene>().score + 50; }
+                if (triggerscore == 2) { forscript.GetComponent<ChangeScene>().score = forscript.GetComponent<ChangeScene>().score + 10; }
             }
         }
 

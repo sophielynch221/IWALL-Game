@@ -22,8 +22,10 @@ public class DGH_SimpleGestureListener : MonoBehaviour, KinectGestures.GestureLi
 	[SerializeField] UnityEvent onHitLeft;
 	[SerializeField] UnityEvent onHitRight;
 	[SerializeField] UnityEvent onJump;
+	[SerializeField] UnityEvent onSquat;
 	[SerializeField] UnityEvent onKickLeft;
 	[SerializeField] UnityEvent onKickRight;
+
 
 
 	public void UserDetected(long userId, int userIndex)
@@ -145,7 +147,12 @@ public class DGH_SimpleGestureListener : MonoBehaviour, KinectGestures.GestureLi
 			case KinectGestures.Gestures.KickRight:
 				onKickRight.Invoke();
 				break;
-
+			case KinectGestures.Gestures.Jump:
+				onSquat.Invoke();
+				break;
+			case KinectGestures.Gestures.Squat:
+				onJump.Invoke();
+				break;
 		}
 		//END NONSENSE
 		return true;

@@ -42,4 +42,8 @@ public class Spawner : MonoBehaviour
             ;
         }
     }
+
+    public void StopCubes() { stop = true; }
+    public void StartCubes() { stop = false; }
+
 }

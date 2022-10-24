@@ -2,11 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Events;
 
 public class LoseALife : MonoBehaviour
 {
     float lives = 3;
     [SerializeField] Text livestext;
+    public UnityEvent youlose;
 
     // Start is called before the first frame update
     void Start()
@@ -21,6 +23,7 @@ public class LoseALife : MonoBehaviour
         if(lives == 0)
         {
             Debug.Log("Game Over");
+            youlose.Invoke();
         }
     }
 
@@ -30,5 +33,10 @@ public class LoseALife : MonoBehaviour
         {
             lives = lives - 1;
         }
+    }
+
+    public void ResetLives()
+    {
+        lives = 3;
     }
 }
