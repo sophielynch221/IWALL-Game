@@ -371,11 +371,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 19a7b06180cc0134da2e40670de1fcaf, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 5.4
+      value: 3.16
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 19a7b06180cc0134da2e40670de1fcaf, type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.7071068
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 19a7b06180cc0134da2e40670de1fcaf, type: 3}
       propertyPath: m_LocalRotation.x
@@ -387,7 +387,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 19a7b06180cc0134da2e40670de1fcaf, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 19a7b06180cc0134da2e40670de1fcaf, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -395,7 +395,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 19a7b06180cc0134da2e40670de1fcaf, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 270
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 19a7b06180cc0134da2e40670de1fcaf, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -668,6 +668,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoretext: {fileID: 1788992994}
   score: 0
+  startcount: 10
+  currentcount: 0
+  disappear:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &624915046
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2017,6 +2022,14 @@ PrefabInstance:
     - target: {fileID: 3506046804512226572, guid: d7064e1c93ee61a41b3894cd413317ba, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3506046804512226573, guid: d7064e1c93ee61a41b3894cd413317ba, type: 3}
+      propertyPath: ShapeModule.type
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3506046804512226573, guid: d7064e1c93ee61a41b3894cd413317ba, type: 3}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
       objectReference: {fileID: 0}
     - target: {fileID: 3506046804512226575, guid: d7064e1c93ee61a41b3894cd413317ba, type: 3}
       propertyPath: m_Name
